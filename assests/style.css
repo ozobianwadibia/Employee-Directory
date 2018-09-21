@@ -1,0 +1,23 @@
+.col-md-3 {
+    background-color: black;
+    height: 100vh;
+}
+
+.col-md-9 {
+    background-color: rgb(30, 139, 112);
+    height: 100vh;
+}
+
+.labels {
+    text-align: center;
+    margin-top: 6rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.entry {
+    width: 300px;
+    border: 1px solid black;
+    height: 120px;
+    margin: 0 auto;
+}
