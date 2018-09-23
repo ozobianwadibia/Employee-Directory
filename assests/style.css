@@ -8,12 +8,18 @@
     height: 100rem;
 }
 
-.labels {
+.inputs {
+    background-color: aquamarine;
+    height: 100rem;
+    text-align: center;
+}
+
+.button-labels {
     text-align: center;
     margin-top: 6rem;
 }
 
-.labels p button {
+.button-labels p button {
     color: black;
     background-color: grey;
     text-transform: uppercase;
