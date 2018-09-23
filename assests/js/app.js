@@ -35,3 +35,16 @@ function add() {
 
     view();
 }
+
+//This function verifies the existence an employee on the list after the 'verify' button is pressed
+function verify() {
+    const nameInput = $("#nameInput").val();
+    const chkName = document.getElementById("chkName");
+    for (let i = 0; i < employeeList.length; i++) {
+        if (nameInput === employeeList[i].name) {
+            chkName.innerText = "Yes";
+        } else {
+            chkName.innerText = "No";
+        }
+    }
+}

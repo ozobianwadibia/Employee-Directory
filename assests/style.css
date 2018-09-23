@@ -1,3 +1,5 @@
+/* s */
+
 .sidebar {
     background-color: black;
     height: 100rem;
@@ -12,6 +14,17 @@
     background-color: aquamarine;
     height: 100rem;
     text-align: center;
+}
+
+.inputs input:nth-child(1) {
+    margin-top: 6rem;
+    width: 80%;
+}
+
+.inputs input:nth-child(2),
+.inputs input:nth-child(3) {
+    width: 80%;
+    margin-top: 3rem;
 }
 
 .button-labels {

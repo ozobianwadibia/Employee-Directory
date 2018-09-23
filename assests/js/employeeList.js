@@ -39,3 +39,5 @@ const employeeList = [{
         phoneNum: '222-789-5231'
     }
 ];
+
+// console.log(employeeList);
