@@ -40,4 +40,4 @@ const employeeList = [{
     }
 ];
 
-// console.log(employeeList);
+// console.log(employeeList.includes('Jan'));

@@ -18,30 +18,32 @@
             <div class="col-md-4 sidebar">
                 <div class="button-labels">
                     <p><button>MY FAVICON HERE!</button></p>
-
-                    <!-- <p><button onclick="view()">view</button></p> -->
                     <p><button id="view">view</button></p>
-                    <p><button onclick="add()">add</button></p>
-                    <p><button onclick="verify()">verify</button></p>
-                    <p><button>update</button></p>
+                    <p><button id="add" onclick="add()">add</button></p>
+                    <p><button id="verify">verify</button></p>
+                    <p><button id="update">update</button></p>
                     <p><button>delete</button></p>
                 </div>
                 <!-- button-labels -->
             </div>
             <!-- col-md-4 sidebar-->
             <div class="col-md-4 main-body">
-                <p id="chkName"></p>
+                <h1 id="chkName"></h1>
             </div>
             <!-- col-md-4 main-body -->
             <div class="col-md-4 inputs">
-                <input id="nameInput" placeholder="Employee Name">
-                <input id="officenumInput" placeholder="Office Number  ***">
-                <input id="phonenumInput" placeholder="Phone Number  ***-***-****">
+                <input type="text" id="nameInput" placeholder="Employee Name">
+                <input type="number" id="officenumInput" min=1 placeholder="Office Number">
+                <input type="text" id="phonenumInput" placeholder="Phone Number">
+                <label for="verifyName">Verify Name Below:</label><br>
+                <input type="text" id="verifyName" placeholder="Verify Employee">
+                <br><br>
+                <label for="eraseName">Delete Name Below:</label><br>
+                <input type="text" id="eraseName" placeholder="Erase Employee">
             </div>
             <!-- col-md-4 input -->
         </div>
         <!-- row -->
-
     </div>
     <!-- container -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

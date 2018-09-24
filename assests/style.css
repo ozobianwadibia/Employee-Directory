@@ -1,4 +1,6 @@
-/* s */
+body {
+    background-color: gray;
+}
 
 .sidebar {
     background-color: black;
@@ -8,6 +10,7 @@
 .main-body {
     background-color: rgb(30, 139, 112);
     height: 100rem;
+    overflow: hidden;
 }
 
 .inputs {
