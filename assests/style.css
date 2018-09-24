@@ -10,7 +10,7 @@ body {
 .main-body {
     background-color: rgb(30, 139, 112);
     height: 100rem;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .inputs {
@@ -40,6 +40,7 @@ body {
     background-color: grey;
     text-transform: uppercase;
     width: 6rem;
+    border: 2px solid white;
 }
 
 .employeeInfo {

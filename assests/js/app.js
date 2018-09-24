@@ -73,13 +73,17 @@ function update() {
 }
 $("#update").on("click", update);
 
+//This function erases the info of a selected employee
 function erase() {
     $(".main-body").empty();
     const eraseName = $("#eraseName").val();
     for (let i = 0; i < employeeList.length; i++) {
-
+        if (employeeList[i].name === eraseName) {
+            employeeList.splice(i, 1);
+        }
     }
-
     // After performing our actions, clear the name input and re-render the list
     $("#eraseName").val('');
+    view();
 }
+$("#erase").on("click", erase);
