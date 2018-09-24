@@ -5,6 +5,7 @@ body {
 .sidebar {
     background-color: black;
     height: 100rem;
+    overflow-y: hidden;
 }
 
 .main-body {
@@ -13,10 +14,16 @@ body {
     overflow-y: scroll;
 }
 
+h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .inputs {
     background-color: aquamarine;
     height: 100rem;
     text-align: center;
+    overflow-y: hidden;
 }
 
 .inputs input:nth-child(1) {

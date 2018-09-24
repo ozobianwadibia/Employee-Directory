@@ -1,6 +1,6 @@
 //This function makes the employee list visible after the 'view' button is pressed
 function view() {
-    // $(".main-body").empty();
+    $(".main-body").empty();
     for (let i = 0; i < employeeList.length; i++) {
         $(".main-body").append("<div class='employeeInfo'>" + "<p>" + employeeList[i].name + "</p>" +
             "<p>" + employeeList[i].officeNum + "</p>" +
@@ -28,27 +28,30 @@ function add() {
     //call the 'view' function
     view();
 }
+$("#add").on("click", add);
 
 //This function verifies the existence of an employee on the list after the 'verify' button is pressed
 function verify() {
     // $(".main-body").empty();
     const verifyName = $("#verifyName").val();
-    const chkName = document.getElementById("chkName");
+    //temporary array to hold the inputed name
+    let tempArr = [];
     for (let i = 0; i < employeeList.length; i++) {
         if (employeeList[i].name === verifyName) {
-            chkName.innerText = "Yes";
-            console.log(chkName.innerHTML);
-        } else {
-            chkName.innerText = "No";
-            console.log(chkName.innerHTML);
+            tempArr.push(employeeList[i].name);
         }
-        // $("#verifyName").val('');
-        // $("#chkName").val('');
+        if (tempArr.includes(verifyName)) {
+            document.getElementById("chkName").innerText = "Yes";
+        } else {
+            document.getElementById("chkName").innerText = "No";
+        }
+        $("#verifyName").val('');
+        $("#chkName").val('');
     }
 }
 $("#verify").on("click", verify);
 
-//This function updates the info of an existing employeee
+//This function updates the info of an existing employee
 function update() {
     $(".main-body").empty();
     const nameInput = $("#nameInput").val();
