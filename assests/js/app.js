@@ -1,5 +1,6 @@
 //This function makes the employee list visible after the 'view' button is pressed
 function view() {
+    $("#chkName").empty();
     $(".main-body").empty();
     for (let i = 0; i < employeeList.length; i++) {
         $(".main-body").append("<div class='employeeInfo'>" + "<p>" + employeeList[i].name + "</p>" +
@@ -11,6 +12,7 @@ $("#view").on("click", view);
 
 //This function adds to the employee list after the 'add' button is pressed
 function add() {
+    $("#chkName").empty();
     $(".main-body").empty();
     const nameInput = $("#nameInput").val();
     const officenumInput = $("#officenumInput").val();
@@ -25,14 +27,17 @@ function add() {
     $("#nameInput").val('');
     $("#officenumInput").val('');
     $("#phonenumInput").val('');
+    $("#chkName").val('');
     //call the 'view' function
     view();
 }
 $("#add").on("click", add);
 
+
 //This function verifies the existence of an employee on the list after the 'verify' button is pressed
 function verify() {
-    // $(".main-body").empty();
+    $(".main-body").empty();
+    $("#chkName").empty();
     const verifyName = $("#verifyName").val();
     //temporary array to hold the inputed name
     let tempArr = [];
@@ -45,11 +50,12 @@ function verify() {
         } else {
             document.getElementById("chkName").innerText = "No";
         }
-        $("#verifyName").val('');
-        $("#chkName").val('');
     }
+    $("#verifyName").val('');
+    $("#chkName").val('');
 }
 $("#verify").on("click", verify);
+
 
 //This function updates the info of an existing employee
 function update() {
@@ -71,6 +77,7 @@ function update() {
     $("#nameInput").val('');
     $("#officenumInput").val('');
     $("#phonenumInput").val('');
+    $("#chkName").val('');
     //call the 'view' function
     view();
 }
@@ -78,12 +85,11 @@ $("#update").on("click", update);
 
 //This function erases the info of a selected employee
 function erase() {
-    // $(".main-body").empty();
+    $("#chkName").val('');
     const eraseName = $("#eraseName").val();
     if (eraseName === "") {
         alert("Please insert a name from the list below in the Erase Name field");
     }
-
     for (let i = 0; i < employeeList.length; i++) {
         if (employeeList[i].name === eraseName) {
             employeeList.splice(i, 1);
