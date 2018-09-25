@@ -13,15 +13,20 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-md-12 heading">
+                <h1>Employee Directory</h1>
+            </div>
+            <!-- col-md-12 heading -->
+        </div>
+        <!-- row -->
+        <div class="row">
             <div class="col-md-4 sidebar">
                 <div class="button-labels">
-                    <p><button>employee directory</button></p>
                     <p><button id="view">view</button></p>
                     <p><button id="add">add</button></p>
                     <p><button id="verify">verify</button></p>
                     <p><button id="update">update</button></p>
                     <p><button id="erase">erase</button></p>
-                    <p><button id="clearAll">clear all</button></p>
                 </div>
                 <!-- button-labels -->
             </div>
@@ -31,14 +36,16 @@
             </div>
             <!-- col-md-4 main-body -->
             <div class="col-md-4 inputs">
+                <label for="nameInput">Add Or Update Employee Below:</label>
                 <input type="text" id="nameInput" placeholder="Employee Name">
                 <input type="number" id="officenumInput" min=1 placeholder="Office Number">
                 <input type="text" id="phonenumInput" placeholder="Phone Number">
-                <label for="verifyName">Verify Employee Below:</label><br>
-                <input type="text" id="verifyName" placeholder="Verify Employee">
                 <br><br>
-                <label for="eraseName">Erase Employee Below:</label><br>
-                <input type="text" id="eraseName" placeholder="Erase Employee">
+                <label for="verifyName">Verify Employee Below:</label>
+                <input type="text" id="verifyName" placeholder="Employee Name">
+                <br><br>
+                <label for="eraseName">Erase Employee Below:</label>
+                <input type="text" id="eraseName" placeholder="Employee Name">
             </div>
             <!-- col-md-4 input -->
         </div>
