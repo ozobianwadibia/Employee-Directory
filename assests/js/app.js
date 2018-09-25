@@ -32,7 +32,6 @@ $("#add").on("click", add);
 
 //This function verifies the existence of an employee on the list after the 'verify' button is pressed
 function verify() {
-    // $(".main-body").empty();
     const verifyName = $("#verifyName").val();
     //temporary array to hold the inputed name
     let tempArr = [];
@@ -78,7 +77,7 @@ $("#update").on("click", update);
 
 //This function erases the info of a selected employee
 function erase() {
-    $(".main-body").empty();
+    // $(".main-body").empty();
     const eraseName = $("#eraseName").val();
     for (let i = 0; i < employeeList.length; i++) {
         if (employeeList[i].name === eraseName) {
@@ -90,3 +89,14 @@ function erase() {
     view();
 }
 $("#erase").on("click", erase);
+
+function clearAll() {
+    $(".main-body").empty();
+
+    // $("#nameInput").val('');
+    // $("#officenumInput").val('');
+    // $("#phonenumInput").val('');
+    // $("#verifyName").val('');
+    // $("#eraseName").val('');
+}
+$("#clearAll").on("click", clearAll);
