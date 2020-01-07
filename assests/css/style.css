@@ -1,0 +1,132 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*************** header section styling *****************/
+.heading {
+  background-color: #b36c64;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading h1 {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*************** midsection styling ********************/
+.mid-section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.button-labels {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.button-labels button {
+  color: white;
+  background-color: #52b380;
+  text-transform: uppercase;
+  width: 6rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  outline: none;
+}
+
+.button-labels button:hover {
+  background-color: #a8ffd2;
+  color: black;
+}
+
+.font {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.inputs {
+  background-color: white;
+  text-align: center;
+}
+
+.inputs input {
+  width: 65%;
+  margin: 1rem auto 0;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+  outline: none;
+}
+
+#chkName {
+  color: black;
+  font-size: 2rem;
+}
+
+hr.style-eight {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #b36c64;
+  color: #b36c64;
+  text-align: center;
+  width: 80%;
+  margin-top: 4rem;
+}
+hr.style-eight:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: white;
+}
+
+/****************** main-body styling ********************/
+.main-body {
+  margin-top: 4rem;
+  background-color: white;
+  width: 100%;
+  height: auto;
+}
+
+.employeeInfo {
+  width: 20rem;
+  border: 3px solid black;
+  height: 8rem;
+  margin: 2rem auto 2rem;
+  color: black;
+  text-align: center;
+}
+
+/*********** media queries************/
+@media (max-width: 310px) {
+  .heading h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .inputs input {
+    width: 80%;
+  }
+}
